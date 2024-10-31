@@ -1,11 +1,20 @@
+import SigninForm from "../SigninForm/SigninForm";
+
 const Landing = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = new FormData(e.target);
+    const email = form.get("email");
+    const password = form.get("password");
+  };
   return (
     <main>
-      <h1>Hello, you are on the landing page for visitors.</h1>
-      <h3>
-        If you sign up for a new account, you will have the ability to sign in
-        and see your super secret dashboard.
-      </h3>
+      <div className="logo">
+
+      </div>
+      <div className=''>
+        <SigninForm />
+      </div>
     </main>
   );
 };
