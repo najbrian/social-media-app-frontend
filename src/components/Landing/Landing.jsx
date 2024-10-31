@@ -1,4 +1,4 @@
-import SigninForm from "../SigninForm/SigninForm";
+
 
 const Landing = () => {
   const handleSubmit = (e) => {
@@ -9,11 +9,8 @@ const Landing = () => {
   };
   return (
     <main>
-      <div className="logo">
-
-      </div>
       <div className=''>
-        <SigninForm />
+        This is the landing page
       </div>
     </main>
   );

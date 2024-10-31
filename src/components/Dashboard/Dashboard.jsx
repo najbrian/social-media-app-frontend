@@ -1,15 +1,23 @@
 import { AuthedUserContext } from '../../App';
-import { useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 
-const Dashboard = ({}) => {
+const Dashboard = (props) => {
   const user = useContext(AuthedUserContext);
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    setPosts(props.posts.filter(post => post.isPublic === true));
+  }, [props.posts])
+
   return (
     <main>
       <h1>Welcome, {user.username}</h1>
-      <p>
-        This is the dashboard page where you, and only you, can see a dashboard
-        of all of your things.
-      </p>
+      {posts.map((post, idx) => (
+        <div key={idx}>
+          {post.title}
+        </div>
+
+      ))}
     </main>
   );
 };
