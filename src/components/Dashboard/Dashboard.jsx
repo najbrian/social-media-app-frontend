@@ -14,7 +14,13 @@ const Dashboard = (props) => {
       <h1>Welcome, {user.username}</h1>
       {posts.map((post, idx) => (
         <div key={idx}>
-          {post.title}
+        
+          <p>{post.title}</p>
+          <p>
+          {post.author.username} posted on {new Date(post.createdAt).toLocaleDateString()}
+          </p>
+          <p>{post.description}</p>
+
         </div>
 
       ))}

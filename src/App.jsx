@@ -20,7 +20,7 @@ const App = () => {
       console.log('Posts:', posts)
       setPosts(posts)
     }
-    if (user) fetchAllPosts;
+    if (user) fetchAllPosts();
 
   }, [user])
 
