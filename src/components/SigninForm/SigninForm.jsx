@@ -35,7 +35,7 @@ const SigninForm = (props) => {
     <main>
       <p className="text-red-600">{message}</p>
       <form autoComplete="off" onSubmit={handleSubmit}>
-        <div className='rounded-lg shadow-lg border w-1/4'>
+        <div className='rounded-lg shadow-lg border relative'>
           <div>
             <input
               type="text"

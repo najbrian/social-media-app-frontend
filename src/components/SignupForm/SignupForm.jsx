@@ -53,6 +53,7 @@ const SignupForm = (props) => {
              value={firstname}
              name="firstname"
              onChange={handleChange}
+             className='border-2 border-gray-400 rounded-md'
              />
         </div>
 
@@ -64,6 +65,7 @@ const SignupForm = (props) => {
              value={lastname}
              name="lastname"
              onChange={handleChange}
+             className='border-2 border-gray-400 rounded-md'
              />
         </div>
 
@@ -75,6 +77,7 @@ const SignupForm = (props) => {
              value={email}
              name="email"
              onChange={handleChange}
+             className='border-2 border-gray-400 rounded-md'
              />
         </div>
 
@@ -86,6 +89,7 @@ const SignupForm = (props) => {
             value={username}
             name="username"
             onChange={handleChange}
+            className='border-2 border-gray-400 rounded-md'
           />
         </div>
         <div>
@@ -96,6 +100,7 @@ const SignupForm = (props) => {
             value={password}
             name="password"
             onChange={handleChange}
+            className='border-2 border-gray-400 rounded-md'
           />
         </div>
         <div>
@@ -106,6 +111,7 @@ const SignupForm = (props) => {
             value={passwordConf}
             name="passwordConf"
             onChange={handleChange}
+            className='border-2 border-gray-400 rounded-md'
           />
         </div>
         <div>
