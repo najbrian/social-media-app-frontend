@@ -3,7 +3,7 @@ import { useState, useContext, useEffect } from "react";
 import { AuthedUserContext } from "../../App";
 
 import * as userProfileService from "/src/services/userProfileService";
-
+import { Link } from 'react-router-dom';
 
 
 const Chats = () => {
@@ -31,8 +31,15 @@ const Chats = () => {
     
   return (
     <>
-      
+    
+    <p>Mutuals:</p>
+    {mutuals.map((mutual, idx) => (
+      <div key={idx}>
+        <p> {mutual.firstname} {mutual.lastname}</p>
+      </div>
+    ))}
 
+    
     </>
   )
 }
