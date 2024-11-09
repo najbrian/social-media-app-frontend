@@ -16,6 +16,18 @@ const createChat = async(user1, user2) => {
     }
 }
 
+const getChats = async (userId) => {
+  try {
+    const res = await fetch(`${BASE_URL_CHAT}/${userId}`, {
+      headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
+    })
+    return res.json();
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 export {
     createChat,
+    getChats
 }
