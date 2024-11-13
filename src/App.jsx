@@ -5,6 +5,7 @@ import Landing from './components/Landing/Landing';
 import Dashboard from './components/Dashboard/Dashboard';
 import SignupForm from './components/SignupForm/SignupForm';
 import SigninForm from './components/SigninForm/SigninForm';
+import Chats from './components/Chats/Chats';
 import * as authService from '../src/services/authService'; // import the authservice
 import * as postService from '../src/services/postService';
 
@@ -37,14 +38,12 @@ const App = () => {
         <NavBar user={user} handleSignout={handleSignout} />
         <Routes>
           {user ? (
-            <Route path="/" element={
-            <Dashboard
-               user={user} 
-               posts={posts}
-               
-               
-               
-               />} />
+            <>
+            <Route path="/" element={<Dashboard user={user} posts={posts} />} />
+            <Route path="/message" element={ <Chats/> }/>
+            
+            
+            </>
           ) : (
             <Route path="/" element={<Landing />} />
           )}
